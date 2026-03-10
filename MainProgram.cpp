@@ -50,9 +50,7 @@ int findMaximum(vector<int> numbers)
 {
     int largestNum = 0;
     for(int number : numbers){
-        if (number > largestNum){
-            largestNum = number;
-        }
+      largestNum = number > largestNum ? number : largestNum;
     }
     
     return largestNum;
@@ -176,3 +174,4 @@ int main()
 
     return 0;
 }
+
