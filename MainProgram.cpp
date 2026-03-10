@@ -12,9 +12,9 @@ PART 1 — Variables and Arithmetic
 
 int addNumbers(int a, int b)
 {
-    // TODO
+      // TODO
     // Return the sum of a and b
-
+    return a + b;
 }
 
 
@@ -27,6 +27,12 @@ PART 2 — Loops
 
 int sumUpToN(int n)
 {
+    int num = 0;
+    for (int i = 0; i <= n ; i++){
+        num += i;
+    }
+    return num;
+    
     // TODO
     // Using a loop calculate the sum
     // 1 + 2 + 3 + ... + n
@@ -42,6 +48,14 @@ PART 3 — Vectors
 
 int findMaximum(vector<int> numbers)
 {
+    int largestNum = 0;
+    for(int number : numbers){
+        if (number > largestNum){
+            largestNum = number;
+        }
+    }
+    
+    return largestNum;
     // TODO
     // Return the largest number in the vector
 }
@@ -56,6 +70,11 @@ PART 4 — Strings
 
 string reverseString(string text)
 {
+    string reversedString = "";
+    for (int i = text.length() -1 ; i >= 0 ; i--){
+        reversedString += text[i];
+    }
+    return reversedString;
     // TODO
     // Return the reversed version of the string
 }
@@ -75,7 +94,10 @@ private:
     int grade;
 
 public:
-
+Student(string Name,int Grade){
+    name = Name;
+    grade = Grade;
+}
     // TODO
     // Create a constructor that receives
     // name and grade
@@ -86,6 +108,11 @@ public:
     // that prints:
     // Name: <name>
     // Grade: <grade>
+    
+    void printInfo(){
+        std::cout << "Name: " << name << std::endl;
+        std::cout << "Grade: " << grade;
+    }
 
 };
 
